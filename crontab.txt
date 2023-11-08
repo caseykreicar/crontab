@@ -16,7 +16,7 @@
 # 
 #
 #m   h  dom  mon  dow   command
-#*   *   *    *    *  sh /path/to/script/script.sh
+#*   *   *    *    *       |
 #|   |   |    |    |       |
 #|   |   |    |    |  Command or Script 
 #|   |   |    |    |       
@@ -30,5 +30,6 @@
 #|   |                  
 #| Hour (0-59)                  
 #|              
-#Min (0-59)
-59 23 1 * 6 sh root/scripts/websiteUpdateAutomation.sh
+#Minutes (0-59)
+#shutdown command with restart option add 1 minute argument @ 8:30AM Sunday every week
+30 8 * * 6 /sbin/shutdown -r +1
