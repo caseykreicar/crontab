@@ -22,14 +22,14 @@
 #|   |   |    |    |       
 #|   |   |    |    |       
 #|   |   |    |    |       
-#|   |   |    |  Day of the Week (0-6)      
+#|   |   |    |  Day of the Week (1-6)      
 #|   |   |    |           
 #|   |   |  Month of the Year (1-12)         
 #|   |   |               
 #|   | Day of the Month (1-31)               
 #|   |                  
-#| Hour (0-59)                  
+#| Hour (0-23)                  
 #|              
 #Minutes (0-59)
-#shutdown command with restart option add 1 minute argument @ 8:30AM Sunday every week
-30 8 * * 6 /sbin/shutdown -r +1
+#shutdown command with restart option add 1 minute argument @ 6:30AM Sunday every week | enable cron via systemctl & use root crontab -e
+30 6 * * 6 /usr/sbin/shutdown -r +1
